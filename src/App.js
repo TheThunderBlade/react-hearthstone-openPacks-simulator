@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {withRouter} from 'react-router-dom'
+import Navbar from "./component/Navbar/Navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {connect} from "react-redux";
+import {autoLogin} from "./redux/actions/auth";
+
+class App extends React.Component{
+
+    componentDidMount() {
+        this.props.autoLogin()
+    }
+
+
+    render() {
+        return (
+            <div className='container'>
+
+                <Navbar />
+            </div>
+        );
+    }
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        isAuthenticated: !!state.authReducer.token
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        autoLogin: () => dispatch(autoLogin())
+    }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

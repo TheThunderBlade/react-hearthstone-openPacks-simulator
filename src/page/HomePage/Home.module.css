@@ -1,0 +1,27 @@
+.Clicker {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    height: 40rem;
+    cursor: pointer;
+}
+
+.Clicker:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.GameBox{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.RulesBox{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 5px;
+}
+
+.RulesBox div button {
+    border-radius: 5px;
+}

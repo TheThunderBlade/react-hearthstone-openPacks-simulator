@@ -1,0 +1,13 @@
+.Image{
+    width: 300px;
+    height: auto;
+}
+
+.ImageBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.ImageBox button{
+    border-radius: 5px;
+}
