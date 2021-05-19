@@ -32,6 +32,7 @@ const HomePage = props => {
             <h1>Кликай и получай баллы</h1>
 
             <div className={Style.GameBox}>
+
                 <div className={Style.Clicker} onClick={props.onAdd}>
 
                 </div>

@@ -11,3 +11,9 @@
 .ImageBox button{
     border-radius: 5px;
 }
+
+@media (max-width: 414px) {
+    .Image {
+        width: 180px;
+    }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Collection from "../../component/Collection/Collection";
 import {connect} from "react-redux";
 
+import Style from './UserPage.module.css'
 
 const UserPage = props => {
     return(
@@ -14,7 +15,7 @@ const UserPage = props => {
 
             <h3 className="text-center"><small>ID пользователя:</small> {
                 props.isAuthenticated ?
-                    localStorage.getItem('userId')
+                    <p className={Style.userId}>{localStorage.getItem('userId')}</p>
                     : <p>Некорректная авторизация</p>
             }</h3>
 

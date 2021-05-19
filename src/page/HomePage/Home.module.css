@@ -6,16 +6,16 @@
     cursor: pointer;
 }
 
-.Clicker:hover{
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+.Clicker:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.GameBox{
+.GameBox {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-.RulesBox{
+.RulesBox {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -24,4 +24,26 @@
 
 .RulesBox div button {
     border-radius: 5px;
+}
+
+@media (max-width: 414px) {
+    .Clicker{
+        height: 30rem;
+    }
+
+    .GameBox {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr  0.5fr;
+    }
+
+    .RulesBox{
+        text-align: center;
+        align-items: center;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 29px;
+    }
 }
